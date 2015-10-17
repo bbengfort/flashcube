@@ -1,0 +1,24 @@
+language: python
+
+python:
+    - "2.7"
+
+install: "pip install -r requirements.txt --use-mirrors"
+
+script: "nosetests -v"
+
+before_script:
+    - psql -c "CREATE ROLE flashcube WITH LOGIN PASSWORD 'd4t41slava!';" -U postgres
+    - psql -c 'CREATE DATABASE flashcube_testing WITH OWNER flashcube;' -U postgres
+
+env:
+    - FLASHCUBE_SETTINGS=flashcube.conf.TestingConfig SKIP_FLASHCUBE_CRYPTO=1
+
+notifications:
+    email:
+        recipients:
+            - benjamin@bengfort.com
+            - allen.leis@gmail.com
+            - spaztick@gmail.com
+        on_success: always
+        on_failure: always

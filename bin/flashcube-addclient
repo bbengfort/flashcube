@@ -1,0 +1,32 @@
+#!/usr/bin/env python
+# flashcube-addclient
+# Add a client directly from the command line.
+#
+# Author:   Benjamin Bengfort <benjamin@bengfort.com>
+# Created:  Fri Oct 16 20:50:39 2015 -0400
+#
+# Copyright (C) 2015 Bengfort.com
+# For license information, see LICENSE.txt
+#
+# ID: flashcube-addclient.py [] benjamin@bengfort.com $
+
+"""
+Add a client directly from the command line.
+"""
+
+##########################################################################
+## Imports
+##########################################################################
+
+import os
+import sys
+
+##########################################################################
+## Main method
+##########################################################################
+
+if __name__ == '__main__':
+    # Set Crypto not required envvar before import.
+    os.environ['SKIP_FLASHCUBE_CRYPTO'] = '1'
+    from flashcube.console.addclient import ClientUtility
+    ClientUtility().load(sys.argv)
