@@ -2,10 +2,14 @@
 
 # Flashcube
 
-[![Build Status][build_status_img]][build_status_page] [![Stories in Ready][waffle_img]][waffle_page]
+[![Build Status][build_status_img]][build_status_page]
+[![Coverage Status][coveralls_img]][coveralls_page]
+[![Stories in Ready][waffle_img]][waffle_page]
 
 [build_status_img]: https://travis-ci.org/bbengfort/flashcube.svg "Build Status"
 [build_status_page]: https://travis-ci.org/bbengfort/flashcube "Travis"
+[coveralls_img]: https://coveralls.io/repos/bbengfort/flashcube/badge.svg?branch=master&service=github
+[coveralls_page]: https://coveralls.io/github/bbengfort/flashcube?branch=master
 [waffle_img]: https://badge.waffle.io/bbengfort/flashcube.png?label=ready&title=Ready "Stories in Ready"
 [waffle_page]: https://waffle.io/bbengfort/flashcube
 
